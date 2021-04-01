@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sleep Deprived Kohonen</title>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.3.0/lib/p5.js"></script>
+        
+    </head>
+    <body>
+        <main>
+
+        </main>
+        <div>
+            <input id="numEpochs" type="number" placeholder="# of Epochs">
+            <label for="numEpochs"># of Epochs</label>
+        </div>
+        <div>
+            <input id="initNeighbourhood" type="number" placeholder="Initial Neighbourhood Size">
+            <label for="initNeighbourhood">Initial Neighbourhood Size</label>
+        </div>
+        <div>
+            <input id="initLearning" type="number" placeholder="Initial Learning Rate">
+            <label for="initLearning">Initial Learning Rate</label>
+        </div>
+        <button onclick="start()">Start</button>
+    </body>
+    <script src="sketch.js"></script>
+</html>
