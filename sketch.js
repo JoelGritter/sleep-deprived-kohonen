@@ -84,8 +84,8 @@ const epoch = () => {
     let curNeighbourhood = initialNeighbourhood * Math.exp(-1 * curEpoch / delta);
     let curLearning = initialLearning * Math.exp(-1 * curEpoch / delta);
 
-    for(let i = 0; i < board.length; i++){
-        for(let j = 0; j < board[i].length; j++){
+    for(let i = Math.max(0, indexesBMU[0] - Math.floor(curNeighbourhood)); i < Math.min(board.length, indexesBMU[0] + Math.floor(curNeighbourhood) + 1); i++){
+        for(let j = Math.max(0, indexesBMU[1] - Math.floor(curNeighbourhood)); j < Math.min(board[i].length, indexesBMU[1] + Math.floor(curNeighbourhood) + 1); j++){
             let dist = positionDistance(indexesBMU, [i,j]);
             
             if(dist <= curNeighbourhood){
